@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Advanced Calculator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="calc">
+    <div class="top-row">
+      <div class="brand">Advanced Calculator</div>
+      <div class="mode-toggle">
+        <button id="modeBasic" class="active">Basic</button>
+        <button id="modeSci">Scientific</button>
+      </div>
+    </div>
+    <div class="lcd">
+      <div class="lcd-expr" id="exprLine">&nbsp;</div>
+      <div class="lcd-main" id="mainLine">0</div>
+      <div class="flags">
+        <span id="flagDeg" class="on">DEG</span>
+        <span id="flagRad">RAD</span>
+        <span id="flagInv">INV</span>
+        <span id="flagM">M</span>
+      </div>
+    </div>
+    <div class="keys" id="sciKeys">
+      <button class="key fn" data-act="inv">Inv</button>
+      <button class="key fn" data-act="deg-rad">Rad</button>
+      <button class="key fn" data-act="fn" data-fn="sin">sin</button>
+      <button class="key fn" data-act="fn" data-fn="cos">cos</button>
+      <button class="key fn" data-act="fn" data-fn="tan">tan</button>
+ 
+      <button class="key fn" data-act="fn" data-fn="ln">ln</button>
+      <button class="key fn" data-act="fn" data-fn="log">log</button>
+      <button class="key fn" data-act="fn" data-fn="sqrt">√x</button>
+      <button class="key fn" data-act="fn" data-fn="square">x²</button>
+      <button class="key fn" data-act="op" data-op="^">xʸ</button>
+ 
+      <button class="key fn" data-act="const" data-const="pi">π</button>
+      <button class="key fn" data-act="const" data-const="e">e</button>
+      <button class="key fn" data-act="fn" data-fn="fact">n!</button>
+      <button class="key fn" data-act="fn" data-fn="inv1x">1/x</button>
+      <button class="key fn" data-act="paren" data-paren="(">(</button>
+    </div>
+    <div class="keys" id="mainKeys">
+      <button class="key fn" data-act="mem" data-mem="mc">MC</button>
+      <button class="key fn" data-act="mem" data-mem="mr">MR</button>
+      <button class="key fn" data-act="mem" data-mem="m+">M+</button>
+      <button class="key fn" data-act="mem" data-mem="m-">M-</button>
+      <button class="key clear" data-act="clear">AC</button>
+ 
+      <button class="key fn" data-act="back">⌫</button>
+      <button class="key fn" data-act="paren" data-paren="(">(</button>
+      <button class="key fn" data-act="paren" data-paren=")">)</button>
+      <button class="key fn" data-act="percent">%</button>
+      <button class="key op" data-act="op" data-op="/">÷</button>
+ 
+      <button class="key" data-act="digit" data-digit="7">7</button>
+      <button class="key" data-act="digit" data-digit="8">8</button>
+      <button class="key" data-act="digit" data-digit="9">9</button>
+      <button class="key op" data-act="op" data-op="*">×</button>
+      <button class="key fn" data-act="toggle-sign">±</button>
+ 
+      <button class="key" data-act="digit" data-digit="4">4</button>
+      <button class="key" data-act="digit" data-digit="5">5</button>
+      <button class="key" data-act="digit" data-digit="6">6</button>
+      <button class="key op" data-act="op" data-op="-">−</button>
+      <button class="key fn" data-act="ans">Ans</button>
+ 
+      <button class="key" data-act="digit" data-digit="1">1</button>
+      <button class="key" data-act="digit" data-digit="2">2</button>
+      <button class="key" data-act="digit" data-digit="3">3</button>
+      <button class="key op" data-act="op" data-op="+">+</button>
+      <button class="key equals" data-act="equals" style="grid-row:span 2;">=</button>
+ 
+      <button class="key wide" data-act="digit" data-digit="0">0</button>
+      <button class="key" data-act="decimal">.</button>
+    </div>
+  </div>
+ 
+  <div class="history">
+    <h2>History</h2>
+    <div class="history-list" id="historyList">
+      <div class="history-empty">No calculations yet</div>
+    </div>
+    <button class="clear-history" id="clearHistory">Clear history</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
